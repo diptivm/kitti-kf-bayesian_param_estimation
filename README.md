@@ -5,7 +5,48 @@ trajectory of a car navigating an outdoor environment from the KITTI dataset. Sp
 
 Please refer to "Project Report" for details on the setup, methodology and results.
 
-LinearKF2D.py: Linear Kalman Filter class with prediction and correction steps
-EM_KalmanFilter.py: EM algorithm for estimation of process and measurement noise parameters in the Kalman Filter
-KF0.ipynb: Notebook applying Kalman Filter on KITTI dataset trajectory
-KF0_EMKF.ipynb: Notebook applying Kalman Filter with EM for parameter estimation on KITTI dataset trajectory
+## Installation
+
+To install the required Python dependencies, run:
+
+```
+pip install -r requirements.txt
+```
+
+## Usage
+
+You can run the provided notebooks to try out the Kalman Filter (KF) and Expectation Maximization (EM) methods:
+
+### 1. Linear Kalman Filter
+
+```
+KF0.ipynb
+```
+Applies the linear Kalman Filter on the KITTI dataset trajectory.
+
+### 2. Kalman Filter with EM for Parameter Estimation
+
+```
+KF0_EMKF.ipynb
+```
+Applies the Linear Kalman Filter with estimation of the process and measurement noise parameters using an Expectation Maximisation approach
+---
+
+**Alternatively, to use the Python scripts directly:**
+
+- Use `LinearKF2D.py` for the linear Kalman Filter.
+- Use `EM_KalmanFilter.py` for the EM-based parameter estimation on the Linear Kalman Filter.
+
+Example minimal usage:
+
+```python
+from LinearKF2D import LinearKF
+from EM_KalmanFilter import EMKalmanFilter
+
+# Instantiate and use the filters according to the examples in the notebooks.
+```
+
+
+
+
+
